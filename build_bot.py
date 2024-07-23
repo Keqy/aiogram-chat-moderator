@@ -1,17 +1,19 @@
 import logging
-import os
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from aiogram import Bot, Dispatcher
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, KeyboardButton, ReplyKeyboardMarkup
+from telethon import TelegramClient
 
 
 scheduler = AsyncIOScheduler(timezone='Europe/Moscow')
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-
-BOT_TOKEN: str = os.getenv('BOT_TOKEN')
-GROUP_ID: int = os.getenv('GROUP_ID')
+# API_ID: int =
+# API_HASH: str = ''
+# PHONE: str =
+BOT_TOKEN: str = '7199298176:AAGX0WfaVfZ-jo6IZjk9ody9Ck40pT4kgpM'
+GROUP_ID: int = -1002219015248
 rules: str = """Перед вступлением в группу, ознакомьтесь с правилами чата Хоккейного Клуба О.С.А<b><i>
 1. Чат предназначен для общение на хоккейную и околохоккейную тему. Обсуждение сторонних вопросов не приветствуется.\n\n
 2. Все занятия клуба проводятся на платной основе. Либо месячный абонемент, либо разовое посещение.\n\n
@@ -24,3 +26,4 @@ accept_inline_keyboard = InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardBu
                                                                                      callback_data='accept')]])
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher(bot=bot)
+# userbot = TelegramClient(session=PHONE, api_id=API_ID, api_hash=API_HASH)
