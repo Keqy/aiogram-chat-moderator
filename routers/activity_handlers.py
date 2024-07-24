@@ -19,3 +19,4 @@ async def poll_answer_activity_process(poll_answer: PollAnswer):
 @activity_router.message()
 async def message_activity_process(message: Message):
     write_down_activity(message.from_user.id)
+    print(message.chat.id)
