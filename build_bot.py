@@ -13,8 +13,8 @@ logger = logging.getLogger(__name__)
 # API_ID: int =
 # API_HASH: str = ''
 # PHONE: str =
-BOT_TOKEN: str = '7199298176:AAGX0WfaVfZ-jo6IZjk9ody9Ck40pT4kgpM'
-GROUP_ID: int = -1002154670349
+BOT_TOKEN: str = os.getenv('BOT_TOKEN')
+GROUP_ID: int = os.getenv('GROUP_ID') 
 rules: str = """Перед вступлением в группу, ознакомьтесь с правилами чата Хоккейного Клуба О.С.А<b><i>
 1. Чат предназначен для общение на хоккейную и околохоккейную тему. Обсуждение сторонних вопросов не приветствуется.\n\n
 2. Все занятия клуба проводятся на платной основе. Либо месячный абонемент, либо разовое посещение.\n\n
